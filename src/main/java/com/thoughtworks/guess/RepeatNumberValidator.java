@@ -1,9 +1,8 @@
-package com.thoughtworks.util;
+package com.thoughtworks.guess;
 
 import org.apache.commons.lang3.StringUtils;
 
 public class RepeatNumberValidator implements Validator {
-
 
     @Override
     public boolean validate(String value) {

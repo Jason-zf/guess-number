@@ -2,6 +2,7 @@ package com.thoughtworks;
 
 import static junit.framework.Assert.assertEquals;
 
+import com.thoughtworks.guess.GuessNumber;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,9 @@ public class GuessNumberTest {
 
     @Before
     public void setUp() throws Exception {
-        guessNumber = new GuessNumber();
+        guessNumber = GuessNumber.builder()
+            .answer("1234")
+            .build();
     }
 
     @Test

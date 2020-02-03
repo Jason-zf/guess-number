@@ -1,4 +1,4 @@
-package com.thoughtworks.util;
+package com.thoughtworks.guess;
 
 public interface Validator {
 
