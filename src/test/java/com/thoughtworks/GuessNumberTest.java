@@ -55,4 +55,10 @@ public class GuessNumberTest {
         String res = guessNumber.process("1123");
         assertEquals("Wrong Input, input again", res);
     }
+
+    @Test
+    public void should_return_error_msg_when_input_12_with_error_size() {
+        String res = guessNumber.process("12");
+        assertEquals("Wrong Input, input again", res);
+    }
 }

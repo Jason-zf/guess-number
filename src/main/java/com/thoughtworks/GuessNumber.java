@@ -1,5 +1,6 @@
 package com.thoughtworks;
 
+import com.thoughtworks.util.LengthValidator;
 import com.thoughtworks.util.RepeatNumberValidator;
 import org.apache.commons.lang3.StringUtils;
 
@@ -9,7 +10,8 @@ public class GuessNumber {
 
     public String process(String guess) {
         RepeatNumberValidator validator = new RepeatNumberValidator();
-        if (!validator.validate(guess)) {
+        LengthValidator lengthValidator = new LengthValidator();
+        if (!validator.validate(guess) || !lengthValidator.validate(guess)) {
             return "Wrong Input, input again";
         }
         int aNumber = 0, bNumber = 0;
