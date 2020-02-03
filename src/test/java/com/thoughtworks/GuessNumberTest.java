@@ -25,4 +25,28 @@ public class GuessNumberTest {
         String res = guessNumber.process("2478");
         assertEquals("0A2B", res);
     }
+
+    @Test
+    public void should_return_1A2B_when_input_0324_with_three_correct_and_two_wrong_position() {
+        String res = guessNumber.process("0324");
+        assertEquals("1A2B", res);
+    }
+
+    @Test
+    public void should_return_0A0B_when_input_5678_with_all_wrong() {
+        String res = guessNumber.process("5678");
+        assertEquals("0A0B", res);
+    }
+
+    @Test
+    public void should_return_0A4B_when_input_4321_with_four_wrong_position() {
+        String res = guessNumber.process("4321");
+        assertEquals("0A4B", res);
+    }
+
+    @Test
+    public void should_return_4A0B_when_input_1234_with_all_correct() {
+        String res = guessNumber.process("1234");
+        assertEquals("4A0B", res);
+    }
 }
