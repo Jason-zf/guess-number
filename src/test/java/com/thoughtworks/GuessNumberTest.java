@@ -49,4 +49,10 @@ public class GuessNumberTest {
         String res = guessNumber.process("1234");
         assertEquals("4A0B", res);
     }
+
+    @Test
+    public void should_return_error_msg_when_input_1123_with_repeat_number() {
+        String res = guessNumber.process("1123");
+        assertEquals("Wrong Input, input again", res);
+    }
 }
