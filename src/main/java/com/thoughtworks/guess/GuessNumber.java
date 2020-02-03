@@ -5,13 +5,21 @@ import static com.thoughtworks.common.Constant.B;
 import static com.thoughtworks.common.Constant.WRONG_INPUT_ERROR_MSG;
 import static java.lang.String.valueOf;
 
+import com.thoughtworks.util.Generator;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 
 @Builder
+@AllArgsConstructor
 public class GuessNumber {
 
     private String answer;
+
+    public GuessNumber() {
+        this.answer = Generator.generate();
+    }
 
     public String process(String guess) {
         if (validate(guess)) {
