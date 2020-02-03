@@ -18,6 +18,11 @@ public class GuessNumberTest {
     public void should_return_1A0B_when_input_1567_with_one_correct() {
         String res = guessNumber.process("1567");
         assertEquals("1A0B", res);
-        assertEquals("1A0B", res);
+    }
+
+    @Test
+    public void should_return_0A2B_when_input_2478_with_two_wrong_position() {
+        String res = guessNumber.process("2478");
+        assertEquals("0A2B", res);
     }
 }
